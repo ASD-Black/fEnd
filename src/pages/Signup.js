@@ -1,20 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
-
 import Logo from '../components/logo'
-import Form from '../components/Form'
+import SignUpform from '../components/SignUpform'
 
 import { Actions } from 'react-native-router-flux'
 
-export default function Login() {
+export default function Signup() {
     return (
       <View style={styles.container}>
         <Logo/>
-        <Form/>
+        <SignUpform/>
         <View style={styles.signUpTextCon}>
-          <Text style={styles.signUpText}>Don't have an account yet</Text>
-          <Text style={styles.signupButton} onPress={()=> Actions.signup()}>   SignUp</Text>
+          <Text style={styles.signUpText}>Already have an account</Text>
+          <Text style={styles.signupButton} onPress={()=> Actions.login()}>   Sign in</Text>
         </View>
       </View>
     );

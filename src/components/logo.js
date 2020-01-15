@@ -14,13 +14,13 @@ export default function Login() {
 
   const styles = StyleSheet.create({
     container : {
-      flex: 1,
+        flexGrow: 1,
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-end',
     },
     logoStyle: {
         marginVertical: 15,
         fontSize: 18,
-        color: 'rgba(255,255,255, 0.5)'
+        color: '#ffffff'
     }
   });
