@@ -1,23 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, KeyboardAvoidingView } from 'react-native';
 
-import Logo from '../components/logo'
-import SignUpform from '../components/SignUpform'
 
-import { Actions } from 'react-native-router-flux'
 
-export default function Signup() {
+
+export default function Home() {
     return (
-        <KeyboardAvoidingView style={{ flex:1}} behavior="padding">
       <View style={styles.container}>
-        <Logo/>
-        <SignUpform/>
-        <View style={styles.signUpTextCon}>
-          <Text style={styles.signUpText}>Already have an account</Text>
-          <Text style={styles.signupButton} onPress={()=> Actions.login()}>   Sign in</Text>
-        </View>
+        <Text>Hi there You are in Home Page</Text>
       </View>
-      </KeyboardAvoidingView>
     );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, KeyboardAvoidingView } from 'react-native';
 
 
 import Logo from '../components/logo'
@@ -7,8 +7,11 @@ import Form from '../components/Form'
 
 import { Actions } from 'react-native-router-flux'
 
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 export default function Login() {
     return (
+      <KeyboardAvoidingView style={{ flex:1}} behavior="padding">
       <View style={styles.container}>
         <Logo/>
         <Form/>
@@ -17,6 +20,7 @@ export default function Login() {
           <Text style={styles.signupButton} onPress={()=> Actions.signup()}>   SignUp</Text>
         </View>
       </View>
+      </KeyboardAvoidingView>
     );
 }
 
